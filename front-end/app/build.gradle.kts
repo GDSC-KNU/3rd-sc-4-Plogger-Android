@@ -48,4 +48,29 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Retrofit2
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // OkHttp
+    // https://github.com/square/okhttp
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+
+    // ViewModel
+    implementation(libs.lifecycle.viewmodel.ktx)
+    // Lifecyle scope dependency
+    implementation(libs.lifecycle.runtime.ktx)
+    // Framework ktx dependency
+    implementation(libs.fragment.ktx)
+    implementation(libs.activity.ktx)
+
+    // Glide
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+
+    // RX
+    implementation(libs.rxjava)
+    implementation(libs.rxandroid)
 }

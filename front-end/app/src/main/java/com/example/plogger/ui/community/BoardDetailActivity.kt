@@ -15,17 +15,20 @@ import com.example.plogger.databinding.ActivityBoardDetailBinding
 import com.example.plogger.model.Board
 import com.example.plogger.model.Chat
 import com.example.plogger.ui.adapter.ChatsAdapter
+import com.example.plogger.ui.util.Util.hideKeyboard
 import com.example.plogger.ui.util.Util.loadImg
 
 class BoardDetailActivity : AppCompatActivity() {
     lateinit var binding: ActivityBoardDetailBinding
     lateinit var board: Board
-//    private val boardDetailViewModel: BoardDetailViewModel by viewModels()
-    val chats = mutableListOf<Chat>(
-        Chat(0,0,"plogger","","멋져요! bb"),
-        Chat(1,1,"plo","","훌륭!!"),
-        Chat(2,2,"plog","","강추!")
+    val chatsAdapter = ChatsAdapter()
+    //    private val boardDetailViewModel: BoardDetailViewModel by viewModels()
+    var chats = mutableListOf<Chat>(
+        Chat(0, 0, "plogger", "", "멋져요! bb"),
+        Chat(1, 1, "plo", "", "훌륭!!"),
+        Chat(2, 2, "plog", "", "강추!")
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBoardDetailBinding.inflate(layoutInflater)
@@ -67,12 +70,22 @@ class BoardDetailActivity : AppCompatActivity() {
             likeNum.text = board.likeCnt.toString()
             chatNum.text = chats.size.toString()
             // 댓글 추가 컨트롤
+            chatSendBtn.setOnClickListener {
+//                boardDetailViewModel.postComment(
+//                    board.boardId,
+//                    chatEditText.text.toString()
+//                )
 
+                chats.add(Chat(chats.size, 0, "plogger", "", chatEditText.text.toString()))
+                chatsAdapter.notifyDataSetChanged()
+                chatEditText.text.clear()
+                hideKeyboard(this@BoardDetailActivity)
+            }
         }
     }
 
     private fun setAdapter() {
-        val chatsAdapter = ChatsAdapter()
+//        val chatsAdapter = ChatsAdapter()
 
         binding.chatRv.apply {
             layoutManager = LinearLayoutManager(this.context)

@@ -78,11 +78,10 @@ dependencies {
     // Google Map
     implementation(libs.play.services.maps)
     implementation(libs.play.services.location)
-
+    
     // Google OAuth
     implementation(libs.google.services)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.bom)
     implementation(libs.play.services.auth)
-
 }

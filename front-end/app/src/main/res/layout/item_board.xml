@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/profile_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/leaf_character"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+v
+        <TextView
+            android:id="@+id/profile_nickname"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="날다람쥐"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@id/profile_img"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:id="@+id/board_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2022.05.28"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/profile_img"
+            app:layout_constraintTop_toBottomOf="@id/profile_nickname" />
+        <ImageButton
+            android:id="@+id/board_detail_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/right_arrow"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/board_img"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:src="@drawable/board_ex"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_box"/>
+    <TextView
+        android:id="@+id/board_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="오늘의 조깅 코스 일지..."
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/board_img"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

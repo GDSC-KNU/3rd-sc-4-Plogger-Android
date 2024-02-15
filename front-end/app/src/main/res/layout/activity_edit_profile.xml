@@ -18,7 +18,7 @@
             android:id="@+id/back_btn"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:background="@drawable/back_arrow"
+            android:background="@drawable/left_arrow"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
             app:layout_constraintStart_toStartOf="parent"

@@ -6,6 +6,10 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.plogger.R
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 object Util {
 
@@ -21,4 +25,14 @@ object Util {
         ims.hideSoftInputFromWindow(activity.window.decorView.applicationWindowToken, 0)
     }
 
+    fun setUpMarker(map: GoogleMap, lat: Double, lng: Double, title: String, marker_icon: Int) {
+        val positionLatLng = LatLng(lat, lng)
+        val markerOptions = MarkerOptions().apply {
+            position(positionLatLng)
+            title(title)
+            icon(BitmapDescriptorFactory.fromResource(marker_icon))
+        }
+
+        map.addMarker(markerOptions)?.showInfoWindow()
+    }
 }

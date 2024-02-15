@@ -45,6 +45,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCDEAizQkBYK1UL0sDbkzCd9rNIzIm_5Z8" />
+
         <activity android:name=".ui.SplashActivity"
             android:exported="true"
             android:theme="@style/Splash">

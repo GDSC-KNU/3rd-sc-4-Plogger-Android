@@ -58,6 +58,18 @@ class JoggingFragment : Fragment(),
         binding.apply {
             mapView.onCreate(savedInstanceState)
             mapView.getMapAsync(this@JoggingFragment)
+
+            ploggingStartBtn.setOnClickListener {
+                ploggingStartBtn.visibility = View.INVISIBLE
+                courseBox.visibility = View.VISIBLE
+            }
+            selectBtn.setOnClickListener {
+
+            }
+            cancelBtn.setOnClickListener {
+                ploggingStartBtn.visibility = View.VISIBLE
+                courseBox.visibility = View.INVISIBLE
+            }
         }
     }
 

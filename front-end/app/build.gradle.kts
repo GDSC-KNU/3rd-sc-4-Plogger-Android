@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin)
 }
 
 android {
@@ -73,4 +74,8 @@ dependencies {
     // RX
     implementation(libs.rxjava)
     implementation(libs.rxandroid)
+
+    // Google Map
+    implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
 }

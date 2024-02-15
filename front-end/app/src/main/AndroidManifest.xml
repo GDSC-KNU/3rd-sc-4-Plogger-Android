@@ -45,6 +45,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="API_Key" />
+
         <activity android:name=".ui.SplashActivity"
             android:exported="true"
             android:theme="@style/Splash">
@@ -67,6 +71,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.user.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.myprofile.EditProfileActivity"
             android:exported="false" />
     </application>
 

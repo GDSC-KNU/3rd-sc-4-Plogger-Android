@@ -23,6 +23,10 @@ rxjava = "2.2.5"
 rxandroid = "2.1.0"
 play-services-maps = "18.2.0"
 play-services-location = "21.1.0"
+google-services = "4.3.15"
+firebase-auth = "22.0.0"
+firebase-bom = "32.0.0"
+play-services-auth = "20.5.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -46,6 +50,10 @@ rxjava = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxjav
 rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxandroid" }
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "play-services-maps" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play-services-location" }
+google-services = { group="com.google.gms", name="google-services", version.ref="google-services" }
+firebase-auth = { group="com.google.firebase", name="firebase-auth", version.ref="firebase-auth" }
+firebase-bom = { group="com.google.firebase", name="firebase-bom", version.ref="firebase-bom" }
+play-services-auth = { group="com.google.android.gms", name="play-services-auth", version.ref="play-services-auth" }
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "com-android-application" }

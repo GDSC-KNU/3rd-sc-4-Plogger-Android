@@ -5,4 +5,10 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android) apply false
     alias(libs.plugins.com.google.android.libraries.mapsplatform.secrets.gradle.plugin) apply false
 }
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 true // Neet to make the Suppress annotation work for the plugins block

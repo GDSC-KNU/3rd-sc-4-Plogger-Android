@@ -188,6 +188,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/board_more_box"
+        app:layout_constraintBottom_toTopOf="@id/chat_editText"/>
+
+    <EditText
+        android:id="@+id/chat_editText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:hint="댓글 입력.."
+        android:textSize="12dp"
+        android:inputType="textLongMessage"
+        android:background="@drawable/gray_background_1"
+        android:paddingStart="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/chat_send_btn"
+        app:layout_constraintTop_toBottomOf="@id/chat_rv"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <Button
+        android:id="@+id/chat_send_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/green_send_message"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toEndOf="@id/chat_editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chat_rv"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

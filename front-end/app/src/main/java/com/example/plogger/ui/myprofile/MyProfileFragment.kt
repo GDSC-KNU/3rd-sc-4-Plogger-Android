@@ -43,6 +43,9 @@ class MyProfileFragment : Fragment() {
     private fun setUi() {
         binding.apply {
 
+            // 사용자 정보
+            profileNickname.text = sharedPreferencesUtil.getUserName()
+
             // 포리필 편집
             box3.setOnClickListener {
                 startActivity(Intent(activity, EditProfileActivity::class.java))
@@ -76,7 +79,7 @@ class MyProfileFragment : Fragment() {
     private fun getGoogleClient(): GoogleSignInClient {
         val googleSignInOption = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestScopes(Scope("https://www.googleapis.com/auth/pubsub"))
-            .requestServerAuthCode(getString(R.string.google_login_client_id))
+            .requestServerAuthCode(getString(R.string.google_login_web_client_id))
             .requestEmail()
             .build()
 

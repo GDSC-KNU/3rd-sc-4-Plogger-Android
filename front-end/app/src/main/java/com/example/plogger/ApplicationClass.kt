@@ -19,10 +19,11 @@ class ApplicationClass : Application() {
         const val MEMBER_ID = "memberId"
         const val ACCESS_TOKEN = "accessToken"
         const val REFRESH_TOKEN = "refreshToken"
-        const val CHALLENGE_ID = "challengeId"
         const val BOARD_ITEM = "boardItem"
         const val CHAT_ITEM = "chatItem"
-        const val USER_INFO = "userInfo"
+        const val USER_NAME = "userName"
+        const val USER_EMAIL = "userEmail"
+        const val AUTH_CODE = "authCode"
     }
 
     override fun onCreate() {

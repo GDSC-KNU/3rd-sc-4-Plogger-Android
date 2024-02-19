@@ -29,11 +29,15 @@ class LoginActivity : AppCompatActivity() {
 
             val userName = account.displayName
             val userEmail = account.email
-            val serverAuth = account.serverAuthCode
+            val authCode = account.serverAuthCode
 
-            Log.d("UserInfo", "Name: $userName, UserEmail: $userEmail")
+            sharedPreferencesUtil.setUserName(userName.toString())
+            sharedPreferencesUtil.setUserEmail(userEmail.toString())
+            sharedPreferencesUtil.setAuthCode(authCode.toString())
+
             startActivity(Intent(this.baseContext, MainActivity::class.java))
             finish()
+
         } catch (e: ApiException) {
             Log.e("GoogleLoginError", e.stackTraceToString())
         }

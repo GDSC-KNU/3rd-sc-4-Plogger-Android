@@ -68,10 +68,12 @@
             android:exported="false" />
         <activity
             android:name=".ui.user.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.user.SignupActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.myprofile.EditProfileActivity"
             android:exported="false" />

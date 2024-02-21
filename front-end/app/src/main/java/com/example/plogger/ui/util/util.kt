@@ -6,10 +6,12 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.plogger.R
+import com.example.plogger.model.MarkerInfo
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolylineOptions
 
 object Util {
 
@@ -30,6 +32,16 @@ object Util {
         val markerOptions = MarkerOptions().apply {
             position(positionLatLng)
             title(title)
+            icon(BitmapDescriptorFactory.fromResource(marker_icon))
+        }
+
+        map.addMarker(markerOptions)?.showInfoWindow()
+    }
+
+    fun setUpMarker(map: GoogleMap, lat: Double, lng: Double, marker_icon: Int) {
+        val positionLatLng = LatLng(lat, lng)
+        val markerOptions = MarkerOptions().apply {
+            position(positionLatLng)
             icon(BitmapDescriptorFactory.fromResource(marker_icon))
         }
 

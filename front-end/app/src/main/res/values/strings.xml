@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Plogger</string>
-    <string name="google_login_web_client_id">795320980852-jt8tosok82j3e755034pv6vk5lmhuvcj.apps.googleusercontent.com</string>
+    <string name="google_login_web_client_id"></string>
 </resources>

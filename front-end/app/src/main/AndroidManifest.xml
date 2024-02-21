@@ -47,7 +47,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="API_Key" />
+            android:value="AIzaSyCDEAizQkBYK1UL0sDbkzCd9rNIzIm_5Z8" />
 
         <activity android:name=".ui.SplashActivity"
             android:exported="true"
@@ -77,8 +77,14 @@
         <activity
             android:name=".ui.myprofile.EditProfileActivity"
             android:exported="false" />
-      <activity
+        <activity
             android:name=".ui.community.BoardDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.jogging.JoggingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.jogging.WriteDiaryActivity"
             android:exported="false" />
     </application>
 

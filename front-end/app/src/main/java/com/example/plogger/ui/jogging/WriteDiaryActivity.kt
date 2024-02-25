@@ -22,7 +22,7 @@ class WriteDiaryActivity : AppCompatActivity() {
             }
 
             recordBtn.setOnClickListener {
-
+                finish()
             }
         }
     }

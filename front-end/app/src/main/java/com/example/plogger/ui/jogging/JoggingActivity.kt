@@ -42,6 +42,7 @@ class JoggingActivity : AppCompatActivity(),
     var is_routing = true
     var picked_up_trash_num = 0
     var route = mutableListOf<MarkerInfo>()
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityJoggingBinding.inflate(layoutInflater)
